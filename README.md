@@ -1,2 +1,0 @@
-# uvinduherath.github.io
-portfolio
