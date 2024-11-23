@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://herathua.github.io/portfolio",
+  "homepage": "https://herathua.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
