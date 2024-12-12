@@ -16,7 +16,7 @@ const projects = [
     title: 'Pothfolio | Portfolio Website',
     description: 'A responsive portfolio website built with React and Tailwind CSS.',
     technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'three.js'],
-    previewUrl: 'http://uvinduherath.me/portfolio/',
+    previewUrl: 'https://portfolio-inky-three-74.vercel.app/',
     github: 'https://github.com/herathua/pothfolio',
     image: 'path/to/pothfolio-image.jpg', // Fallback image
   },

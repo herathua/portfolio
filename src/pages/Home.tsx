@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { FaReact, FaJava, FaDocker, FaAws, FaNodeJs, FaDatabase, FaPython } from 'react-icons/fa'; // Example icons for some technologies
-import EarthCanvas from '../components/canvas/EarthCanvas';
-import StarsBackground from '../components/StarsBackground';
 import { FaC } from 'react-icons/fa6';
+import DeveloperImage from '../image/Developer.jpg';
 
 export default function Home() {
   const technologies = [
@@ -23,7 +22,6 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen pt-16">
-      <StarsBackground />
       <section className="relative flex items-center min-h-screen">
         <div className="container flex flex-col items-center px-4 mx-auto sm:px-6 lg:px-8 md:flex-row">
           <motion.div
@@ -38,13 +36,14 @@ export default function Home() {
             <p className="mb-8 text-lg italic text-gray-100 md:text-xl dark:text-gray-100">
               "From Concept to Code, We Bring Ideas to Life."
             </p>
-            <div className='mb-12'>
-            <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
-              I create innovative and user-friendly software solutions that
-              bring your ideas to life. From intuitive websites to robust
-              backend systems, I use the latest technologies to deliver scalable
-              and effective results. Let's build something great together!
-            </p>
+            <div className="mb-12">
+              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+                I create innovative and user-friendly software solutions that
+                bring your ideas to life. From intuitive websites to robust
+                backend systems, I use the latest technologies to deliver
+                scalable and effective results. Let's build something great
+                together!
+              </p>
             </div>
 
             <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
@@ -65,7 +64,11 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="z-10 md:w-1/2 h-[400px] md:h-[600px]">
-            <EarthCanvas />
+            <img
+              src={DeveloperImage}
+              alt="Developer"
+              className="object-cover w-full h-full rounded-full"
+            />
           </div>
         </div>
       </section>
