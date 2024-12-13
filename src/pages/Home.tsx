@@ -1,22 +1,66 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { FaReact, FaJava, FaDocker, FaAws, FaNodeJs, FaDatabase, FaPython } from 'react-icons/fa'; // Example icons for some technologies
-import { FaC } from 'react-icons/fa6';
-import DeveloperImage from '../image/Developer.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import {
+  FaReact,
+  FaJava,
+  FaDocker,
+  FaAws,
+  FaNodeJs,
+  FaDatabase,
+  FaPython,
+} from "react-icons/fa"; // Example icons for some technologies
+import { FaC } from "react-icons/fa6";
+import DeveloperImage from "../image/Developer.jpg";
 
 export default function Home() {
   const technologies = [
-    { icon: <FaC className="w-12 h-12" />, label: 'C', color: 'text-Yellow-500' },
-    { icon: <FaJava className="w-12 h-12" />, label: 'Java', color: 'text-red-500' },
-    { icon: <FaPython className="w-12 h-12" />, label: 'Python', color: 'text-pink-500' },
-    { icon: <FaNodeJs className="w-12 h-12" />, label: 'Node.js', color: 'text-green-500' },
-    { icon: <FaReact className="w-12 h-12" />, label: 'React', color: 'text-blue-500' },
-    { icon: <FaDocker className="w-12 h-12" />, label: 'Docker', color: 'text-orange-500' },
-    { icon: <FaAws className="w-12 h-12" />, label: 'AWS', color: 'text-yellow-500' },
-    { icon: <FaDatabase className="w-12 h-12" />, label: 'MySQL', color: 'text-purple-500' },
-    { icon: <FaDatabase className="w-12 h-12" />, label: 'MongoDB', color: 'text-green-700' }
+    {
+      icon: <FaC className="w-12 h-12" />,
+      label: "C",
+      color: "text-Yellow-500",
+    },
+    {
+      icon: <FaJava className="w-12 h-12" />,
+      label: "Java",
+      color: "text-red-500",
+    },
+    {
+      icon: <FaPython className="w-12 h-12" />,
+      label: "Python",
+      color: "text-pink-500",
+    },
+    {
+      icon: <FaNodeJs className="w-12 h-12" />,
+      label: "Node.js",
+      color: "text-green-500",
+    },
+    {
+      icon: <FaReact className="w-12 h-12" />,
+      label: "React",
+      color: "text-blue-500",
+    },
+    {
+      icon: <FaDocker className="w-12 h-12" />,
+      label: "Docker",
+      color: "text-orange-500",
+    },
+    {
+      icon: <FaAws className="w-12 h-12" />,
+      label: "AWS",
+      color: "text-yellow-500",
+    },
+    {
+      icon: <FaDatabase className="w-12 h-12" />,
+      label: "MySQL",
+      color: "text-purple-500",
+    },
+    {
+      icon: <FaDatabase className="w-12 h-12" />,
+      label: "MongoDB",
+      color: "text-green-700",
+    },
     // Add more technologies with respective icons here
   ];
 
@@ -38,11 +82,19 @@ export default function Home() {
             </p>
             <div className="mb-12">
               <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
-                I create innovative and user-friendly software solutions that
-                bring your ideas to life. From intuitive websites to robust
-                backend systems, I use the latest technologies to deliver
-                scalable and effective results. Let's build something great
-                together!
+                Hey there! I'm <strong>Uvindu Herath</strong>, a dedicated{" "}
+                <strong>software engineer</strong> and problem-solver from Sri
+                Lanka. My passion lies in transforming ideas into innovative
+                software solutions and crafting seamless, intuitive user
+                experiences. Currently, I’m pursuing my B.Sc. (Hons) in
+                Information Technology and Management as a 3rd-year student at
+                the University of Moratuwa. With every line of code I write, I
+                strive to grow, adapt, and embrace challenges that push the
+                boundaries of modern technology. When I’m not immersed in
+                developing software, you’ll find me exploring the latest tech
+                trends, sharing insights through articles, or brainstorming
+                creative ideas to make a meaningful impact in the digital world.
+                <br />Let’s build the future, one project at a time!
               </p>
             </div>
 
