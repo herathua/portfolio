@@ -1,6 +1,7 @@
 # Portfolio Project
 
-This portfolio showcases my skills, experience, and projects as a software engineer. It provides a central hub for potential employers and collaborators to explore my work and achievements.
+This portfolio showcases my skills, experience, and projects as a software engineer. 
+It provides a central hub for potential employers and collaborators to explore my work and achievements.
 
 ## Features
 
