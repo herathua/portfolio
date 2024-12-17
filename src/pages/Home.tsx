@@ -81,37 +81,37 @@ export default function Home() {
               "From Concept to Code, We Bring Ideas to Life."
             </p>
             <div className="mb-12">
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 Hey there! I'm <strong>Uvindu Herath</strong>, a dedicated{" "}
                 <strong>software engineer</strong> and problem-solver from Sri
                 Lanka.
               </p>
 
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 My passion lies in transforming ideas into innovative software
                 solutions and crafting seamless, intuitive user experiences.
               </p>
 
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 Currently, I’m pursuing my B.Sc. (Hons) in Information
                 Technology and Management as a 3rd-year student at the
                 University of Moratuwa.
               </p>
 
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 With every line of code I write, I strive to grow, adapt, and
                 embrace challenges that push the boundaries of modern
                 technology.
               </p>
 
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 When I’m not immersed in developing software, you’ll find me
                 exploring the latest tech trends, sharing insights through
                 articles, or brainstorming creative ideas to make a meaningful
                 impact in the digital world.
               </p>
 
-              <p className="text-lg text-gray-100 md:text-xl dark:text-gray-100">
+              <p className="text-sm text-gray-100 md:text-base dark:text-gray-100">
                 Let’s build the future, one project at a time!
               </p>
             </div>
