@@ -17,6 +17,13 @@ const blogPosts = [
     image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*wz3_MbYjw-zQdb4Bp4BYgQ.png',
     link: 'https://medium.com/@uvherath/new-ux-ui-design-trends-6597ead35aec',
   },
+  {
+    title: 'A* Algorithm',
+    description: 'The A* algorithm is a shining example of how smart design can lead to powerful results.',
+    category: 'AI',
+    image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*QYfdtd642TLeuVfqp4GgjQ.png',
+    link: 'https://medium.com/@uvherath/a-algorithm-d4ed9084f13a',
+  },
 ];
 
 export default function Blog() {
