@@ -1,7 +1,138 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Linkedin } from 'lucide-react';
-import emailjs from 'emailjs-com'; // Import Email.js SDK
+import emailjs from 'emailjs-com';
+
+const CelebrationEffect = ({ isVisible }) => {
+  if (!isVisible) return null;
+
+  const createRibbons = () => {
+    const ribbons = [];
+    for (let i = 0; i < 20; i++) {
+      ribbons.push(
+        <motion.div
+          key={`ribbon-${i}`}
+          initial={{ y: -50, x: Math.random() * (window.innerWidth * 0.8), opacity: 0 }}
+          animate={{
+            y: window.innerHeight * 0.8,
+            rotate: 360,
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 2,
+            delay: i * 0.1,
+            ease: "linear"
+          }}
+          style={{
+            position: 'fixed',
+            width: '6px',
+            height: '60px',
+            background: 'linear-gradient(45deg, #1ba94c, #149c44)',
+            zIndex: 1000,
+            left: '50%',
+            marginLeft: `-${Math.random() * 300 - 150}px`,
+          }}
+        />
+      );
+    }
+    return ribbons;
+  };
+
+  const createFireworks = () => {
+    const fireworks = [];
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    
+    for (let i = 0; i < 3; i++) {
+      const baseX = centerX + (i - 1) * 200;
+      const baseY = centerY - 100;
+      
+      for (let j = 0; j < 16; j++) {
+        const angle = (j / 16) * Math.PI * 2;
+        const distance = 150;
+        
+        fireworks.push(
+          <motion.div
+            key={`firework-${i}-${j}`}
+            initial={{
+              x: baseX,
+              y: baseY,
+              scale: 0,
+              opacity: 1,
+            }}
+            animate={{
+              x: baseX + Math.cos(angle) * distance,
+              y: baseY + Math.sin(angle) * distance,
+              scale: [0, 1, 0.5, 0],
+              opacity: [1, 1, 0.8, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              delay: 2 + i * 0.3,
+              ease: "easeOut"
+            }}
+            style={{
+              position: 'fixed',
+              width: '8px',
+              height: '8px',
+              borderRadius: '50%',
+              background: `hsl(${Math.random() * 360}, 100%, 50%)`,
+              boxShadow: '0 0 8px currentColor',
+              zIndex: 1000,
+            }}
+          />
+        );
+      }
+      
+      fireworks.push(
+        <motion.div
+          key={`flash-${i}`}
+          initial={{
+            x: baseX,
+            y: baseY,
+            scale: 0,
+            opacity: 1,
+          }}
+          animate={{
+            scale: [0, 4, 0],
+            opacity: [1, 0.8, 0],
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 2 + i * 0.3,
+            ease: "easeOut"
+          }}
+          style={{
+            position: 'fixed',
+            width: '4px',
+            height: '4px',
+            borderRadius: '50%',
+            background: 'white',
+            boxShadow: '0 0 20px white',
+            zIndex: 999,
+          }}
+        />
+      );
+    }
+    
+    return fireworks;
+  };
+
+  return (
+    <div style={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      width: '100%', 
+      height: '100%', 
+      pointerEvents: 'none',
+      zIndex: 1000 
+    }}>
+      {createRibbons()}
+      {createFireworks()}
+    </div>
+  );
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,6 +143,7 @@ export default function Contact() {
   });
 
   const [status, setStatus] = useState('');
+  const [showCelebration, setShowCelebration] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -22,10 +154,9 @@ export default function Contact() {
     e.preventDefault();
     setStatus('Sending...');
 
-    // Your Email.js service details (use your own user ID and template ID)
-    const serviceID = 'service_21y31lw';  // Find this in Email.js dashboard
-    const templateID = 'template_h467sbj'; // Find this in Email.js dashboard
-    const userID = 'k7uMoQKf6xZbyDH4l';  // Use your Email.js user ID
+    const serviceID = 'service_21y31lw';
+    const templateID = 'template_h467sbj';
+    const userID = 'k7uMoQKf6xZbyDH4l';
 
     try {
       const response = await emailjs.send(
@@ -38,6 +169,11 @@ export default function Contact() {
       if (response.status === 200) {
         setStatus('Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
+        setShowCelebration(true);
+        
+        setTimeout(() => {
+          setShowCelebration(false);
+        }, 4000); // Reduced to 4 seconds to match animation duration
       } else {
         setStatus('Failed to send the message. Try again later.');
       }
@@ -48,7 +184,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="relative min-h-screen pt-24 pb-16">
+      <CelebrationEffect isVisible={showCelebration} />
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
