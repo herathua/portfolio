@@ -24,6 +24,13 @@ const blogPosts = [
     image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*QYfdtd642TLeuVfqp4GgjQ.png',
     link: 'https://medium.com/@uvherath/a-algorithm-d4ed9084f13a',
   },
+  {
+    title: 'Understanding Research Methods in UX Design.',
+    description: 'Understanding your users is one of the most essential parts of UX design...',
+    category: 'Development',
+    image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*qV2viS1rDuhZYuQQIjSmqg.jpeg',
+    link: 'https://medium.com/@uvherath/understanding-research-methods-in-ux-design-a3df455be1f5',
+  },
 ];
 
 export default function Blog() {
